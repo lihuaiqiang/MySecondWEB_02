@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //testDiv.css("color","red")
+            //testDiv.style.color = "blue";
+            //1、点击第一个按钮，让div的文字变为红色，要求使用原生的dom操作
+            var elementById = document.getElementById("dom2dom");
+            elementById.onclick = function () {
+                var divObj = document.getElementById("testDiv");
+                divObj.style.color = "red";
+            }
+
+            //2、使用DOM对象调用jQuery方法：使用dom对象能不操作jquery的css()方法来改变文字颜色呢
+            var elementById2 = document.getElementById("dom2jQuery");
+            //把dom对象转换成 jquery 对象
+            var $2 = $(elementById2);
+            $2.click(function () {
+                $(document.getElementById("testDiv")).css({color:"blue",background:"yellow"});
+            });
+
+            //3、使用jQuery对象调用jQuery方法：使用jQuery对象调用jQuery方法
+            var $jQuery2jQuery = $("#jQuery2jQuery");
+            $jQuery2jQuery.click(function () {
+                $("#testDiv").css("color","green");
+            });
+
+            //4、使用jQuery对象调用DOM方法：使用jQuery对象调用DOM方法
+            var $jQuery2dom = $("#jQuery2dom");
+            var eleObj = $jQuery2dom[0];
+            //alert("id 为jQuery2dom是否是dom对象：" + eleObj);
+            eleObj.onclick = function () {
+                var $testDiv = $("#testDiv");
+                //把jQuery 对象转换成dom对象
+                var eleDivObj = $testDiv[0];
+                alert(eleDivObj);
+                eleDivObj.style.color = "purple";
+            }
+        });
+
+    </script>
+</head>
+<body>
+<!-- // style="color: red"-->
+<div id="testDiv">Aixuexi is Very Good!</div>
+
+<button id="dom2dom">使用DOM对象调用DOM方法</button>
+<button id="dom2jQuery">使用DOM对象调用jQuery方法</button>
+<button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+<button id="jQuery2dom">使用jQuery对象调用DOM方法</button>
+
+</body>
+</html>

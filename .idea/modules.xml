@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyJQueryTest.iml" filepath="$PROJECT_DIR$/MyJQueryTest.iml" />
+      <module fileurl="file://H:/gaosi/Warcraft/Warcraft.iml" filepath="H:/gaosi/Warcraft/Warcraft.iml" />
+      <module fileurl="file://H:/gaosi/avatar/avatar.iml" filepath="H:/gaosi/avatar/avatar.iml" />
+      <module fileurl="file://H:/gaosi/godfather/godfather.iml" filepath="H:/gaosi/godfather/godfather.iml" />
+    </modules>
+  </component>
+</project>

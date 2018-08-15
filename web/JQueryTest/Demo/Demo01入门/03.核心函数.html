@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.核心函数</title>
+    <script src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        // $：表示的是核心函数，作用：
+        //①当核心函数中传入一个函数时，表示：在文档加载完成后执行这个函数，就相当于js代码中的window.onload
+        $(function () {
+            //②当核心函数中的参数传入的是标签的属性ID的值时，表示通过标签的Id属性获取标签元素
+            var $ulId = $("ul");
+
+            //③当参数中传入的是HTML字符串时，表示：根据这个字符串创建元素节点对象
+            //$("<li>手机</li>").appendTo($ulId);//appendTo 后的参数表示在哪个元素节点下创建新的元素节点
+            //append 和 appendTo 两种方法均可实现插入的效果
+            $ulId.append("<li>手机</li>");
+            $("<li>电脑</li>").appendTo($ulId);
+
+            var elementById = document.getElementById("p1");//获取dom对象
+            //alert("dom对象：" + elementById);// [object HTMLParagraphElement]
+            //④当传入的参数是dom对象时表示：把dom对象转换位jquery对象
+            var $2 = $(elementById);
+            //alert("jquery对象：" + $2);// [object Object]
+
+            //alert($("#p1")[0]);
+            //alert($("#p1")[0].id);
+
+            // jquery对象转换成dom对象后才可以调用dom对象中的方法
+            alert("a标签中的内容：" + $("#aid")[0].innerHTML);
+
+            $("#aid").click(function () {
+                alert("点击 a 标签");
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        p {
+            display: block;
+            width: 120px;
+            height: 400px;
+            border: 2px solid;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">你好1</p>
+    <p id="p2">你好2</p>
+    <p>你好3</p>
+    <p>你好4</p>
+    <ul id="ulId1">
+        <li>相机</li>
+    </ul>
+    <ul id="ulId2">
+        <li>香蕉</li>
+    </ul>
+    <!-- #是链接到本页面 -->
+    <a id="aid" href="#p2">你好</a>
+</body>
+</html>

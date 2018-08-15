@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script type="text/javascript">-->
+        <!--window.onload = function () {-->
+            <!--var btnObj = document.getElementById("btn01");-->
+            <!--btnObj.onclick = function () {-->
+                <!--alert("HelloWorld");-->
+            <!--}-->
+        <!--}-->
+    <!--</script>-->
+
+    <!-- 使用jquery 的方式请求
+        1、先引入 jquery 包文件，即javascript的第三方库文件
+
+     -->
+    <script src="../script/jquery-1.7.2.js"></script>
+    <script>
+        $(function () {
+            //使用 $();查找元素。 使用 .click()来绑定点击响应函数，把单击响应函数作为 click()的参数传入即可。
+            $("#btn01").click(function () {
+                //alert("HelloWorld -- jquery");
+            });
+
+            $("#btn02").click(function () {
+                //alert("$ 的本质是：" + $ );
+                console.log($);
+            });
+
+            //获取所有的 button对象
+            var butObj = $("button");
+            alert(butObj.length);
+        });
+    </script>
+</head>
+<body>
+    <button id="btn01">sayHelloWorld</button>
+    <button id="btn02">测试$的本质</button>
+</body>
+</html>
+
+
+
+
+
+
+

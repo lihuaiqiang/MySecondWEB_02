@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="avatar" />
+        <module name="godfather" />
+        <module name="Warcraft" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="avatar" target="1.7" />
+      <module name="godfather" target="1.7" />
+      <module name="Warcraft" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

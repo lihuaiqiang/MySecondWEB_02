@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld</title>
+</head>
+<body>
+    <div id="far01">
+        <h1>far01</h1>
+        <div id="son01">son01</div>
+        <div id="son02">son02</div>
+    </div>
+    <hr/>
+    <div id="far02">
+        <h1 id="h1Id">far02</h1>
+    </div>
+    <script>
+        var far01Obj = document.getElementById("far01");
+        var son01Obj = document.getElementById("son01");
+        var son02Obj = document.getElementById("son02");
+        var far02Obj = document.getElementById("far02");
+        var h1IdObj = document.getElementById("h1Id");
+//        far02Obj.appendChild(son01Obj);
+//        far02Obj.appendChild(son02Obj);
+        far02Obj.insertBefore(son01Obj,h1IdObj);
+//        var newNode = document.createTextNode("这是新创建的文本节点");
+//        far02Obj.appendChild(newNode);
+    </script>
+</body>
+</html>
