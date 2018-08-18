@@ -21,11 +21,14 @@
         $(function () {
             //使用 $();查找元素。 使用 .click()来绑定点击响应函数，把单击响应函数作为 click()的参数传入即可。
             $("#btn01").click(function () {
+                alert("测试！！");
+            });
+            $("#btn01").click(function () {
                 //alert("HelloWorld -- jquery");
             });
 
             $("#btn02").click(function () {
-                //alert("$ 的本质是：" + $ );
+                alert("$ 的本质是：" + $ );
                 console.log($);
             });
 

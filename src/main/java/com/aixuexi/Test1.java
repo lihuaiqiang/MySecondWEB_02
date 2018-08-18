@@ -1,4 +1,4 @@
-package com.aixuexi;
+package main.java.com.aixuexi;
 
 import java.io.FileOutputStream;
 
